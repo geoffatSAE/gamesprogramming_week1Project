@@ -20,7 +20,16 @@ public class SwitchScript : MonoBehaviour
         r = GetComponent<Renderer>();
     }
 
+    //
+    //
     // Update is called once per frame
+
+    private void FixedUpdate()
+    {
+        
+    }
+
+
     void Update()
     {
 
