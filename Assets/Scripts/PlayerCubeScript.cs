@@ -7,7 +7,8 @@ public class PlayerCubeScript : MonoBehaviour
 
     public CounterCubeScript theCounterCube;
     float speed = 6.0f;
-    public int coins = 0;
+    
+    [SerializeField] private int coins = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,19 @@ public class PlayerCubeScript : MonoBehaviour
 
         //move the player based on the values
         transform.Translate(inputFromPlayer * speed * Time.deltaTime);
+
+    }
+
+    public void SetIncreaseCoins(int numberOfCoins)
+    {
+        //checking that its not too many coins! No less than 1, no more than 9
+        coins += Mathf.Clamp(numberOfCoins, 1, 9);
+
+
+        // and update the ui
+
+        //and show the particle system that makes it look good.
+
 
     }
 }

@@ -8,13 +8,35 @@ public class CounterCubeScript : MonoBehaviour
     //int i = 10;
     public PlayerCubeScript thePlayerScript;
 
+    public enum Coin { Yellow, Red };
+    public Coin myCoinType;
+
     Renderer r;
+
+    public int coinValue;
 
     // Start is called before the first frame update
     void Start()
     {
         r = GetComponent<Renderer>();
         r.material.color = Color.blue;
+
+        switch (myCoinType)
+        {
+            case Coin.Yellow:
+                //we are a yellow coin so
+                coinValue = 1;
+                r.material.color = Color.yellow;
+                break;
+
+            case Coin.Red:
+                coinValue = 10;
+                r.material.color = Color.red;
+                break;
+
+        }
+
+
     }
 
     // Update is called once per frame
@@ -41,9 +63,11 @@ public class CounterCubeScript : MonoBehaviour
             //
             //get a reference to the player cubes player script
             thePlayerScript = other.gameObject.GetComponent<PlayerCubeScript>();
-            
+
             // add to the value of coins collected on the player script
-            thePlayerScript.coins += 1;
+            thePlayerScript.SetIncreaseCoins(coinValue);
         }
     }
+
+
 }
