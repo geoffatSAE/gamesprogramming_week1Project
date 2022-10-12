@@ -134,7 +134,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collision has happened eh, and it was " + collision.gameObject.name);
+        //Debug.Log("collision has happened eh, and it was " + collision.gameObject.name);
 
         if(collision.gameObject.name == "Wall")
         {
