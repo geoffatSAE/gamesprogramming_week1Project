@@ -23,7 +23,7 @@ public class Coin : MonoBehaviour
         if(other.gameObject.name == "MyCube")
         {
             Debug.Log("player has entered the trigger, the coin is collected");
-            Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
             
         }
 
