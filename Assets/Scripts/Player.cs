@@ -29,8 +29,8 @@ public class Player : MonoBehaviour
         speed = 6.0f;
 
         //Player Movement Code
-        //read the input of the horizontal and vertical, store them in a variabl
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        //read the input of the horizontal and vertical, store them in a variable
+        float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
         //Debug.Log("The vertical is " + verticalInput + " and the horizontal is " + horizontalInput);
