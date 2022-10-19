@@ -19,13 +19,13 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
 
-            int randomXValue = Random.Range(0, 10);
-
-            Instantiate(coin, new Vector3(i, 0f, randomXValue), Quaternion.identity);
+            //int randomXValue = Random.Range(0, 10);
+            
+            Instantiate(coin, new Vector3(i, 0f, 0), Quaternion.identity);
 
         }
 
-        /*
+        
         //3 DIMENSIONS
         for (int i = 0; i < 10; i++)
         {
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
                 
             }
-        }*/
+        }
 
 
     }

@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     private float speed;
     public bool tutorialComplete;
     public int playerLevel;
+    public Transform spawnPoint;
 
+    public GameObject myObjectToSpawn;
     //public Text coinUIText;
 
     // Start is called before the first frame update
@@ -40,6 +42,11 @@ public class Player : MonoBehaviour
 
         //no longer updating UI from the player script, refer to the UI Manager
         //coinUIText.text = "Coins: " + coinsCollected.ToString();
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            Instantiate(myObjectToSpawn, spawnPoint.position, Quaternion.identity);
+        }
 
     }
 
