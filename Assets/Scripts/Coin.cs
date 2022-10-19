@@ -24,6 +24,9 @@ public class Coin : MonoBehaviour
         {
             Debug.Log("player has entered the trigger, the coin is collected");
             Destroy(gameObject, 0.5f);
+
+            //add a coin to the player
+            other.gameObject.GetComponent<Player>().CollectedCoin(1);
             
         }
 
