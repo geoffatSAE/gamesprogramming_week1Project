@@ -45,7 +45,12 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            Instantiate(myObjectToSpawn, spawnPoint.position, Quaternion.identity);
+            GameObject bullet = Instantiate(myObjectToSpawn, spawnPoint.position, Quaternion.identity) as GameObject;
+            Rigidbody r = bullet.GetComponent<Rigidbody>();
+            
+            bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+            Debug.Break();
+            r.AddRelativeForce(Vector3.forward * 1000);
         }
 
     }
