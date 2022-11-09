@@ -11,7 +11,8 @@ public class EnemyFollowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        volumeToMonitor = GameObject.FindGameObjectWithTag("VolumeDetector").GetComponent<VolumeDetection>();
     }
 
     // Update is called once per frame
