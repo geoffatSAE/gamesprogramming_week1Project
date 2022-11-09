@@ -22,7 +22,7 @@ public class MegamanFollow : MonoBehaviour
        
     }
 
-    public void LookAt()
+    private void LookAt()
     {
 
         //2D version of transform.LookAt(player.transform.position)
@@ -33,7 +33,7 @@ public class MegamanFollow : MonoBehaviour
         MoveRight(1);
     }
 
-    public void Face()
+    private void Face()
     {
 
         //x axis, are they in front or behind me

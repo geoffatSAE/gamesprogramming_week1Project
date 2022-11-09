@@ -6,19 +6,12 @@ public class VolumeDetection : MonoBehaviour
 {
     public Material on, off;
     Renderer r;
-
     public bool playerInsideVolume;
 
     // Start is called before the first frame update
     void Start()
     {
         r = GetComponent<Renderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)

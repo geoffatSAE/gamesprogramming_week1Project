@@ -8,6 +8,8 @@ public class EnemyFollowScript : MonoBehaviour
     public VolumeDetection volumeToMonitor;
     public float speed = 1;
     bool chasePlayer;
+    float health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +28,7 @@ public class EnemyFollowScript : MonoBehaviour
             //run after him
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
+
+        //update the value of my UI element with health
     }
 }

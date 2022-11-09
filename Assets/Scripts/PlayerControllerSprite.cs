@@ -44,6 +44,7 @@ public class PlayerControllerSprite : MonoBehaviour
         }
 
 
+        // Only do the death animation once.
         myAnimator.SetBool("isDead", false);
 
         if (playedDeathAnimation == false)
