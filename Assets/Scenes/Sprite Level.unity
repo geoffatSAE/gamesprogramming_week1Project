@@ -546,6 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAnimator: {fileID: 412939998}
   mySprites: {fileID: 412939997}
+  playedDeathAnimation: 0
   speed: 2
 --- !u!50 &583310271
 Rigidbody2D:
