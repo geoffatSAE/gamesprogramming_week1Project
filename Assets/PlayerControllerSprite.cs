@@ -7,6 +7,8 @@ public class PlayerControllerSprite : MonoBehaviour
     public Animator myAnimator;
     public GameObject mySprites;
 
+    public bool playedDeathAnimation = false;
+
     public float speed;
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,19 @@ public class PlayerControllerSprite : MonoBehaviour
 
         }
 
+
+        myAnimator.SetBool("isDead", false);
+
+        if (playedDeathAnimation == false)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                //death of player
+
+                myAnimator.SetBool("isDead", true);
+                playedDeathAnimation = true;
+            }
+        } 
 
 
 
