@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-        
+        /*
         //3 DIMENSIONS
         for (int i = 0; i < 10; i++)
         {
@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
                 
             }
         }
+        */
 
 
     }

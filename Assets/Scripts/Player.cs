@@ -105,5 +105,10 @@ public class Player : MonoBehaviour
 
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
 
+
+        if (Input.GetButton("Kaboom"))
+        {
+            Debug.Log("kaboom");
+        }
     }
 }
