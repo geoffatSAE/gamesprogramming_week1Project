@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public int coinsCollected = 0; //declared and assigned in a single line
-    private float speed;
+    private float speed, rotateSpeed;
     public bool tutorialComplete;
     public int playerLevel;
     public Transform spawnPoint;
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     {
         //coinsCollected = 0;
         speed = 3.2f;
-
+        rotateSpeed = 100.0f;
         //horizontalInput = 6.0f;
     }
 
@@ -28,17 +28,10 @@ public class Player : MonoBehaviour
     {
         speed = 6.0f;
 
-        //Player Movement Code
-        //read the input of the horizontal and vertical, store them in a variable
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        // call the movement function
+        //PlayerMovementPokemonStyle();
+        PlayerMovementTankStyle();
 
-        //Debug.Log("The vertical is " + verticalInput + " and the horizontal is " + horizontalInput);
-        Vector3 inputFromPlayer = new Vector3(horizontalInput, 0, verticalInput);
-
-        //move the player based on the values
-        transform.Translate(inputFromPlayer * speed * Time.deltaTime);
-        //
 
         //no longer updating UI from the player script, refer to the UI Manager
         //coinUIText.text = "Coins: " + coinsCollected.ToString();
@@ -83,5 +76,34 @@ public class Player : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         //Debug.Log("collision has ended with " + collision.gameObject.name);
+    }
+
+    public void PlayerMovementPokemonStyle()
+    {
+
+        //Player Movement Code
+        //read the input of the horizontal and vertical, store them in a variable
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        //Debug.Log("The vertical is " + verticalInput + " and the horizontal is " + horizontalInput);
+        Vector3 inputFromPlayer = new Vector3(horizontalInput, 0, verticalInput);
+
+        //move the player based on the values
+        transform.Translate(inputFromPlayer * speed * Time.deltaTime);
+        //
+    }
+
+    public void PlayerMovementTankStyle()
+    {
+        //Player Movement Code
+        //read the input of the horizontal and vertical, store them in a variable
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        transform.Rotate(0, horizontalInput * Time.deltaTime * rotateSpeed, 0);
+
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+
     }
 }
