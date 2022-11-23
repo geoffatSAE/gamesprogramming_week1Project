@@ -38,7 +38,7 @@ public class PlayerCubeScript : MonoBehaviour
         speed = 6.0f;
 
         //Player Movement Code
-        //read the input of the horizontal and vertical, store them in a variabl
+        //read the input of the horizontal and vertical, store them in a variable
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
