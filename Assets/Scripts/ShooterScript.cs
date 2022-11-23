@@ -6,6 +6,7 @@ public class ShooterScript : MonoBehaviour
 {
     public GameObject myCamera;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class ShooterScript : MonoBehaviour
             Vector3 forward = myCamera.transform.TransformDirection(Vector3.forward) * 10;
 
             //draw a line
-            Debug.DrawRay(myCamera.transform.position, forward, Color.cyan);
+            Debug.DrawRay(myCamera.transform.position, forward, Color.red);
 
             //save a raycast to store the hit data
             RaycastHit hit;

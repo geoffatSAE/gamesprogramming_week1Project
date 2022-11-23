@@ -4,6 +4,9 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 
+
+//From reference :: https://sharpcoderblog.com/blog/unity-3d-fps-controller
+
 public class SC_FPSController : MonoBehaviour
 {
     public float walkingSpeed = 7.5f;

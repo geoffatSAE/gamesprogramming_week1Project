@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControllerSimple : MonoBehaviour
 {
     public float speed;
+    private float health; //unused health from UML
 
     // Start is called before the first frame update
     void Start()
