@@ -17,20 +17,23 @@ public class MegamanFollow : MonoBehaviour
     void Update()
     {
 
-        //LookAt();
-        Face();
+        LookAt2D();
+        //Face();
        
     }
 
-    private void LookAt()
+    private void LookAt2D()
     {
 
         //2D version of transform.LookAt(player.transform.position)
         //Look at the player position
-        Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+        Quaternion rotation = Quaternion.LookRotation(
+            player.transform.position - transform.position, 
+            transform.TransformDirection(Vector3.up)
+            );
         transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
 
-        MoveRight(1);
+        //MoveRight(1);
     }
 
     private void Face()
@@ -44,13 +47,13 @@ public class MegamanFollow : MonoBehaviour
         {
             //print("The other transform is behind me!");
             MoveRight(1);
-            
-            
+            //transform.Translate(1 * speed * Time.deltaTime, 0, 0);
+
 
         } else
         {
             MoveRight(-1);
-            
+            //transform.Translate(-1 * speed * Time.deltaTime, 0, 0);
         }
     }
 

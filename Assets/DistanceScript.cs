@@ -30,7 +30,17 @@ public class DistanceScript : MonoBehaviour
         {
             //chase the player
             transform.Translate(Vector3.forward * Time.deltaTime);
+
+        } else if (distanaceToPlayer < 2.0f)
+        {
+            transform.Translate(-Vector3.forward * Time.deltaTime);
+
+        } else
+        {
+            //hes in the sweep spot
         }
+
+
 
     }
 
