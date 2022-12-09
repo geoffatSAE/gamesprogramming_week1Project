@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 841094046}
   - component: {fileID: 841094045}
   - component: {fileID: 841094044}
+  - component: {fileID: 841094047}
   m_Layer: 0
   m_Name: crab sheet_0
   m_TagString: Untagged
@@ -686,6 +687,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841094047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841094043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5ff1793a822b2468e9c5dbd8083fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mmSpriteGO: {fileID: 841094043}
+  player: {fileID: 583310266}
+  speed: 1
 --- !u!1 &1206965882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,7 +1082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1918265918
 MonoBehaviour:
   m_ObjectHideFlags: 0

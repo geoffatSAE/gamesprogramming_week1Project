@@ -17,8 +17,10 @@ public class MegamanFollow : MonoBehaviour
     void Update()
     {
 
-        LookAt2D();
-        //Face();
+        //LookAt2D();
+        //
+        //
+        Face();
        
     }
 
@@ -40,8 +42,7 @@ public class MegamanFollow : MonoBehaviour
     {
 
         //x axis, are they in front or behind me
-        float d = transform.position.x - player.transform.position.x;
-              
+        float d = transform.position.x - player.transform.position.x;  
         //
         if (d < 0)
         {
@@ -49,11 +50,20 @@ public class MegamanFollow : MonoBehaviour
             MoveRight(1);
             //transform.Translate(1 * speed * Time.deltaTime, 0, 0);
 
-
         } else
         {
             MoveRight(-1);
             //transform.Translate(-1 * speed * Time.deltaTime, 0, 0);
+        }
+
+        float y = transform.position.y - player.transform.position.y;
+        //
+        if(y < 0)
+        {
+            MoveUp(1);
+        } else
+        {
+            MoveUp(-1);
         }
     }
 
